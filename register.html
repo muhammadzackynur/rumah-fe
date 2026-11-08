@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daftar Akun - Ruma</title>
+
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <main class="register-page">
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <section class="left-panel">
+
+            <!-- BRAND -->
+            <header class="brand">
+                <a href="#" class="logo">
+                    ruma<span>.</span>
+                </a>
+
+                <p class="tagline">
+                    PILIHAN BAIK, SETIAP HARI
+                </p>
+            </header>
+
+
+            <!-- HERO CONTENT -->
+            <div class="hero-content">
+
+                <span class="small-title">
+                    TOKO ONLINE UNTUK KESEHARIANMU
+                </span>
+
+                <h1>
+                    Hal baik dimulai
+                    dari sini.
+                </h1>
+
+                <p class="hero-description">
+                    Satu akun untuk semua yang kamu suka.
+                    Temukan pilihan baru, simpan favoritmu,
+                    dan nikmati belanja yang lebih personal.
+                </p>
+
+
+                <!-- CATEGORY -->
+                <div class="categories">
+
+                    <button type="button">Living</button>
+                    <button type="button">Fashion</button>
+                    <button type="button">Lifestyle</button>
+
+                </div>
+
+
+                <!-- PROMO CARD -->
+                <div class="promo-card">
+
+                    <span class="promo-small">
+                        KHUSUS MEMBER BARU
+                    </span>
+
+                    <h2>
+                        Halo, member baru.
+                    </h2>
+
+                    <p>
+                        Simpan barang incaran, pantau pesanan,
+                        dan temukan penawaran khusus untukmu.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEFT FOOTER -->
+            <footer class="left-footer">
+                TERKURASI DENGAN HATI. &nbsp; DIPILIH OLEHMU.
+            </footer>
+
+        </section>
+
+
+        <!-- ================= RIGHT PANEL ================= -->
+
+        <section class="right-panel">
+
+            <!-- HELP -->
+            <div class="help">
+                <a href="#" id="helpLink">
+                    Butuh bantuan?
+                </a>
+            </div>
+
+
+            <!-- REGISTER FORM -->
+            <div class="register-container">
+
+                <!-- WELCOME -->
+                <div class="welcome">
+
+                    <span class="welcome-label">
+                        MULAI CERITA BARUMU
+                    </span>
+
+                    <h2>
+                        Buat akun baru
+                    </h2>
+
+                    <p>
+                        Daftar sekarang, temukan favoritmu berikutnya.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+                <form id="registerForm">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Nama lengkap
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Masukkan nama lengkap"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="nama@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Kata sandi
+                        </label>
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Buat kata sandi"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                            >
+                                Lihat
+                            </button>
+
+                        </div>
+
+                        <small class="password-hint">
+                            Minimal 8 karakter, gunakan huruf dan angka.
+                        </small>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="terms">
+
+                        <label class="terms-label">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <span>
+                                Saya menyetujui
+                                <a href="#" class="terms-link">
+                                    Syarat & Ketentuan
+                                </a>
+                                serta
+                                <a href="#" class="terms-link">
+                                    Kebijakan Privasi
+                                </a>
+                                Ruma.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div
+                        id="formMessage"
+                        class="form-message"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- REGISTER BUTTON -->
+                    <button
+                        type="submit"
+                        class="register-button"
+                        id="registerButton"
+                    >
+                        Buat akun
+                    </button>
+
+                </form>
+
+
+                <!-- DIVIDER -->
+                <div class="divider">
+
+                    <span></span>
+
+                    <p>atau lanjutkan dengan</p>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- GOOGLE BUTTON -->
+                <button
+                    type="button"
+                    class="google-button"
+                    id="googleButton"
+                >
+                    <span class="google-icon">G</span>
+                    Lanjutkan dengan Google
+                </button>
+
+
+                <!-- LOGIN LINK -->
+                <div class="login-link">
+
+                    Sudah punya akun?
+
+                    <a href="login.html">
+                        Masuk
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT FOOTER -->
+            <footer class="right-footer">
+
+                <span>© 2026 Ruma.</span>
+
+                <span class="dot">•</span>
+
+                <a href="#">Privasi</a>
+
+                <span class="dot">•</span>
+
+                <a href="#">Ketentuan</a>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>

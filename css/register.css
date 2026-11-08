@@ -1,0 +1,1028 @@
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fbfaf5;
+    color: #193f35;
+    overflow: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.register-page {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: grid;
+    grid-template-columns: 42.7% 57.3%;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.left-panel {
+    background: #153f35;
+    color: #f8f8ef;
+
+    height: 100%;
+
+    padding:
+        clamp(25px, 5vh, 65px)
+        clamp(25px, 5.2vw, 85px)
+        clamp(20px, 4vh, 45px);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo {
+    font-size: clamp(32px, 3.4vw, 54px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -2px;
+
+    color: #f8f8ef;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #dcecb5;
+}
+
+.tagline {
+    font-size: clamp(9px, 0.85vw, 13px);
+    color: #bdcec5;
+    letter-spacing: 0.2px;
+}
+
+
+/* HERO */
+
+.hero-content {
+    margin-top: clamp(45px, 9vh, 110px);
+    max-width: 650px;
+}
+
+.small-title {
+    display: block;
+
+    font-size: clamp(9px, 0.9vw, 13px);
+    font-weight: 700;
+
+    color: #dcecb5;
+
+    margin-bottom: clamp(15px, 3vh, 35px);
+}
+
+.hero-content h1 {
+    font-size: clamp(34px, 4.2vw, 65px);
+    font-weight: 500;
+
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+
+    color: #f8f8ef;
+}
+
+.hero-description {
+    margin-top: clamp(18px, 3.5vh, 35px);
+
+    font-size: clamp(12px, 1.15vw, 17px);
+    line-height: 1.65;
+
+    color: #bdcec5;
+
+    max-width: 470px;
+}
+
+
+/* CATEGORY */
+
+.categories {
+    display: flex;
+    gap: clamp(7px, 0.8vw, 12px);
+
+    margin-top: clamp(22px, 4vh, 45px);
+}
+
+.categories button {
+    height: clamp(32px, 4.5vh, 43px);
+
+    min-width: clamp(65px, 7vw, 105px);
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(225, 238, 225, 0.35);
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #f4f6ef;
+
+    font-size: clamp(10px, 0.9vw, 13px);
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.categories button:hover {
+    background: #dcecb5;
+    color: #153f35;
+    border-color: #dcecb5;
+}
+
+
+/* PROMO CARD */
+
+.promo-card {
+    margin-top: clamp(30px, 7vh, 75px);
+
+    padding:
+        clamp(18px, 2.5vw, 30px);
+
+    background: #dcecb5;
+
+    color: #153f35;
+
+    border-radius: clamp(14px, 2vw, 25px);
+
+    width: 100%;
+    max-width: 600px;
+}
+
+.promo-small {
+    display: block;
+
+    font-size: clamp(8px, 0.75vw, 11px);
+    font-weight: 700;
+
+    margin-bottom: clamp(10px, 2vh, 20px);
+}
+
+.promo-card h2 {
+    font-size: clamp(22px, 2.5vw, 35px);
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.promo-card p {
+    margin-top: clamp(18px, 4vh, 42px);
+
+    font-size: clamp(10px, 0.9vw, 13px);
+    line-height: 1.55;
+
+    color: #284b3d;
+}
+
+
+/* LEFT FOOTER */
+
+.left-footer {
+    margin-top: auto;
+
+    font-size: clamp(8px, 0.7vw, 11px);
+    color: #bdcec5;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.right-panel {
+    background: #fbfaf5;
+
+    height: 100%;
+    position: relative;
+
+    padding:
+        clamp(20px, 4vh, 50px)
+        clamp(35px, 8vw, 120px)
+        clamp(18px, 3vh, 35px);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* HELP */
+
+.help {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.help a {
+    color: #718078;
+
+    font-size: clamp(9px, 0.8vw, 12px);
+
+    text-decoration: none;
+}
+
+.help a:hover {
+    color: #153f35;
+}
+
+
+/* =====================================================
+   REGISTER CONTAINER
+===================================================== */
+
+.register-container {
+    width: 100%;
+    max-width: 540px;
+
+    margin: auto;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    margin-bottom: clamp(18px, 3vh, 32px);
+}
+
+.welcome-label {
+    display: block;
+
+    color: #28624d;
+
+    font-size: clamp(8px, 0.75vw, 11px);
+    font-weight: 700;
+
+    margin-bottom: clamp(8px, 1.5vh, 15px);
+}
+
+.welcome h2 {
+    font-size: clamp(25px, 2.5vw, 36px);
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+
+    line-height: 1.15;
+
+    color: #1e3d33;
+}
+
+.welcome p {
+    margin-top: clamp(7px, 1.3vh, 13px);
+
+    font-size: clamp(10px, 0.95vw, 14px);
+
+    color: #718078;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+    margin-bottom: clamp(12px, 2vh, 20px);
+}
+
+.form-group label {
+    display: block;
+
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: 600;
+
+    color: #243f35;
+
+    margin-bottom: clamp(6px, 1vh, 9px);
+}
+
+.form-group input {
+    width: 100%;
+
+    height: clamp(38px, 5.5vh, 52px);
+
+    padding: 0 clamp(12px, 1.3vw, 18px);
+
+    border: 1px solid #d8dfd9;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #193f35;
+
+    font-size: clamp(10px, 0.9vw, 13px);
+
+    transition: 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #8b9991;
+}
+
+.form-group input:focus {
+    border-color: #28624d;
+
+    box-shadow: 0 0 0 3px rgba(40, 98, 77, 0.08);
+}
+
+
+/* PASSWORD */
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 65px;
+}
+
+#togglePassword {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #28624d;
+
+    font-size: clamp(10px, 0.85vw, 12px);
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.password-hint {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #89958e;
+
+    font-size: clamp(8px, 0.7vw, 10px);
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.terms {
+    margin-top: clamp(12px, 2vh, 20px);
+    margin-bottom: clamp(15px, 2.5vh, 25px);
+}
+
+.terms-label {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    color: #75837b;
+
+    font-size: clamp(9px, 0.8vw, 11px);
+    line-height: 1.6;
+}
+
+.terms-label input {
+    width: 13px;
+    height: 13px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    accent-color: #28624d;
+
+    cursor: pointer;
+}
+
+.terms-link {
+    color: #68796f;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    color: #28624d;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.form-message {
+    display: none;
+
+    padding: 9px 12px;
+
+    margin-bottom: 12px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+}
+
+.form-message.error {
+    display: block;
+    color: #a22c2c;
+    background: #fce9e7;
+}
+
+.form-message.success {
+    display: block;
+    color: #28624d;
+    background: #e7f3e9;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.register-button {
+    width: 100%;
+
+    height: clamp(40px, 5.8vh, 54px);
+
+    border: none;
+    border-radius: 6px;
+
+    background: #28624d;
+
+    color: #fff;
+
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.register-button:hover {
+    background: #1e503d;
+}
+
+.register-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+    gap: 15px;
+
+    margin:
+        clamp(13px, 2.5vh, 24px)
+        0;
+}
+
+.divider span {
+    height: 1px;
+
+    background: #e1e5df;
+
+    flex: 1;
+}
+
+.divider p {
+    font-size: clamp(9px, 0.75vw, 11px);
+
+    color: #87938c;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   GOOGLE BUTTON
+===================================================== */
+
+.google-button {
+    width: 100%;
+
+    height: clamp(40px, 5.8vh, 54px);
+
+    border: 1px solid #d8dfd9;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #244438;
+
+    font-size: clamp(10px, 0.9vw, 13px);
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.google-button:hover {
+    background: #f4f6f2;
+}
+
+.google-icon {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4285f4;
+}
+
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.login-link {
+    text-align: center;
+
+    margin-top: clamp(16px, 2.5vh, 25px);
+
+    font-size: clamp(9px, 0.85vw, 12px);
+
+    color: #89958e;
+}
+
+.login-link a {
+    margin-left: 5px;
+
+    color: #28624d;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RIGHT FOOTER
+===================================================== */
+
+.right-footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(7px, 1vw, 13px);
+
+    margin-top: auto;
+
+    padding-top: 12px;
+
+    font-size: clamp(8px, 0.7vw, 10px);
+
+    color: #87938c;
+}
+
+.right-footer a {
+    color: #87938c;
+    text-decoration: none;
+}
+
+.right-footer a:hover {
+    color: #28624d;
+}
+
+.dot {
+    color: #87938c;
+}
+
+
+/* =====================================================
+   LAPTOP - SHORT SCREEN
+===================================================== */
+
+@media (max-height: 750px) and (min-width: 901px) {
+
+    .left-panel {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .hero-content {
+        margin-top: 45px;
+    }
+
+    .small-title {
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        margin-top: 18px;
+    }
+
+    .categories {
+        margin-top: 22px;
+    }
+
+    .promo-card {
+        margin-top: 30px;
+        padding: 18px 22px;
+    }
+
+    .promo-card p {
+        margin-top: 16px;
+    }
+
+    .right-panel {
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+
+    .register-container {
+        max-width: 500px;
+    }
+
+    .welcome {
+        margin-bottom: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 11px;
+    }
+
+    .terms {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .divider {
+        margin: 12px 0;
+    }
+
+    .login-link {
+        margin-top: 13px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .register-page {
+        height: auto;
+        min-height: 100dvh;
+
+        grid-template-columns: 1fr;
+
+        overflow: visible;
+    }
+
+    .left-panel {
+        min-height: 650px;
+        height: auto;
+
+        padding: 40px 8%;
+    }
+
+    .hero-content {
+        margin-top: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(42px, 7vw, 65px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .promo-card {
+        max-width: 600px;
+    }
+
+    .right-panel {
+        min-height: 700px;
+        height: auto;
+
+        padding: 35px 8%;
+    }
+
+    .register-container {
+        max-width: 540px;
+        margin: 65px auto;
+    }
+
+    .welcome h2 {
+        font-size: 32px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .register-button,
+    .google-button {
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .right-footer {
+        padding-bottom: 15px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .left-panel {
+        min-height: auto;
+
+        padding: 35px 25px 40px;
+    }
+
+    .logo {
+        font-size: 42px;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .hero-content {
+        margin-top: 65px;
+    }
+
+    .small-title {
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .categories {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .categories button {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .promo-card {
+        margin-top: 45px;
+        padding: 25px;
+    }
+
+    .promo-card h2 {
+        font-size: 27px;
+    }
+
+    .promo-card p {
+        font-size: 12px;
+        margin-top: 22px;
+    }
+
+    .left-footer {
+        margin-top: 50px;
+        font-size: 9px;
+    }
+
+    .right-panel {
+        min-height: 700px;
+        padding: 30px 25px;
+    }
+
+    .register-container {
+        margin: 65px auto 45px;
+    }
+
+    .welcome-label {
+        font-size: 10px;
+    }
+
+    .welcome h2 {
+        font-size: 31px;
+    }
+
+    .welcome p {
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        height: 52px;
+        font-size: 13px;
+    }
+
+    .password-hint {
+        font-size: 10px;
+    }
+
+    .terms-label {
+        font-size: 10px;
+    }
+
+    .register-button,
+    .google-button {
+        height: 52px;
+        font-size: 13px;
+    }
+
+    .login-link {
+        font-size: 12px;
+    }
+
+    .right-footer {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   VERY SHORT DESKTOP
+===================================================== */
+
+@media (max-height: 620px) and (min-width: 901px) {
+
+    .left-panel {
+        padding-top: 15px;
+        padding-bottom: 12px;
+    }
+
+    .hero-content {
+        margin-top: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        margin-top: 12px;
+        font-size: 11px;
+    }
+
+    .categories {
+        margin-top: 15px;
+    }
+
+    .categories button {
+        height: 30px;
+    }
+
+    .promo-card {
+        margin-top: 18px;
+        padding: 12px 17px;
+    }
+
+    .promo-card h2 {
+        font-size: 20px;
+    }
+
+    .promo-card p {
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    .right-panel {
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    .register-container {
+        max-width: 440px;
+    }
+
+    .welcome {
+        margin-bottom: 9px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .welcome p {
+        margin-top: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 7px;
+    }
+
+    .form-group input {
+        height: 34px;
+    }
+
+    .password-hint {
+        margin-top: 4px;
+    }
+
+    .terms {
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+
+    .register-button,
+    .google-button {
+        height: 35px;
+    }
+
+    .divider {
+        margin: 7px 0;
+    }
+
+    .login-link {
+        margin-top: 8px;
+    }
+
+    .right-footer {
+        padding-top: 5px;
+    }
+}

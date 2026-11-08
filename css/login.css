@@ -1,0 +1,1357 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fbfaf5;
+    color: #173f35;
+
+    /* Desktop tidak boleh scroll */
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   ROOT PAGE
+===================================================== */
+
+.page {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+
+    display: grid;
+    grid-template-columns: 58% 42%;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.left-panel {
+    width: 100%;
+    height: 100dvh;
+
+    background: #123f35;
+    color: #f8f8ef;
+
+    /* Padding ikut tinggi layar */
+    padding:
+        clamp(30px, 5vh, 70px)
+        clamp(35px, 7vw, 100px)
+        clamp(25px, 4vh, 45px);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(12px, 2vh, 22px);
+}
+
+.logo {
+    font-size: clamp(42px, 4.2vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    color: #f5f5ed;
+}
+
+.logo span {
+    color: #e1e9c7;
+}
+
+.tagline {
+    font-size: clamp(12px, 1.2vw, 17px);
+
+    color: #c8d1ca;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-content {
+
+    /*
+     * Jarak otomatis menyesuaikan tinggi layar
+     */
+    margin-top: clamp(45px, 10vh, 130px);
+
+    max-width: 720px;
+}
+
+.small-title {
+
+    font-size: clamp(12px, 1.2vw, 17px);
+
+    font-weight: 700;
+
+    color: #e0e8bf;
+
+    margin-bottom:
+        clamp(20px, 4vh, 48px);
+}
+
+
+.hero-content h1 {
+
+    /*
+     * Ukuran judul mengikuti lebar layar
+     */
+    font-size:
+        clamp(42px, 5vw, 82px);
+
+    font-weight: 500;
+
+    line-height: 1.03;
+
+    letter-spacing: -3px;
+
+    color: #f8f8f0;
+}
+
+
+.hero-description {
+
+    margin-top:
+        clamp(20px, 4vh, 48px);
+
+    font-size:
+        clamp(15px, 1.5vw, 22px);
+
+    line-height: 1.6;
+
+    color: #cbd4cf;
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.categories {
+
+    display: flex;
+
+    gap:
+        clamp(8px, 1vw, 15px);
+
+    margin-top:
+        clamp(25px, 5vh, 60px);
+
+    flex-wrap: wrap;
+}
+
+
+.categories button {
+
+    min-width:
+        clamp(105px, 10vw, 150px);
+
+    height:
+        clamp(42px, 6vh, 60px);
+
+    padding:
+        0 clamp(18px, 2vw, 30px);
+
+    border:
+        1.5px solid
+        rgba(225, 233, 224, 0.35);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #f1f3ed;
+
+    font-size:
+        clamp(14px, 1.3vw, 19px);
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.categories button:hover {
+
+    background: #e0ebbd;
+
+    color: #16483d;
+
+    border-color: #e0ebbd;
+}
+
+
+/* =====================================================
+   PROMO CARD
+===================================================== */
+
+.promo-card {
+
+    /*
+     * Card mengecil otomatis pada layar pendek
+     */
+    margin-top:
+        clamp(35px, 6vh, 80px);
+
+    background: #dcecb5;
+
+    color: #123f35;
+
+    border-radius:
+        clamp(20px, 2vw, 32px);
+
+    padding:
+        clamp(22px, 3vw, 45px);
+
+    max-width: 760px;
+}
+
+
+.promo-small {
+
+    font-size:
+        clamp(11px, 1.1vw, 16px);
+
+    font-weight: 700;
+
+    margin-bottom:
+        clamp(12px, 2vh, 25px);
+}
+
+
+.promo-card h2 {
+
+    font-size:
+        clamp(30px, 3.2vw, 48px);
+
+    font-weight: 500;
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+}
+
+
+.promo-card p {
+
+    margin-top:
+        clamp(12px, 2vh, 28px);
+
+    font-size:
+        clamp(13px, 1.3vw, 20px);
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   LEFT FOOTER
+===================================================== */
+
+.left-footer {
+
+    /*
+     * Footer selalu berada di bawah
+     */
+    margin-top: auto;
+
+    font-size:
+        clamp(10px, 1vw, 15px);
+
+    color: #c5d0ca;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.right-panel {
+
+    width: 100%;
+    height: 100dvh;
+
+    background: #fbfaf5;
+
+    position: relative;
+
+    padding:
+        clamp(25px, 5vh, 70px)
+        clamp(30px, 7vw, 100px)
+        clamp(20px, 4vh, 45px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HELP
+===================================================== */
+
+.help {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+
+.help a {
+
+    color: #687b73;
+
+    font-size:
+        clamp(12px, 1.2vw, 17px);
+
+    text-decoration: none;
+}
+
+
+.help a:hover {
+    color: #123f35;
+}
+
+
+/* =====================================================
+   LOGIN CONTAINER
+===================================================== */
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 610px;
+
+    /*
+     * Form berada di tengah vertikal
+     */
+    margin:
+        auto;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.welcome {
+
+    margin-bottom:
+        clamp(20px, 3vh, 42px);
+}
+
+
+.welcome > span {
+
+    display: block;
+
+    color: #28624d;
+
+    font-size:
+        clamp(10px, 1vw, 14px);
+
+    font-weight: 700;
+
+    margin-bottom:
+        clamp(12px, 2vh, 24px);
+}
+
+
+.welcome h2 {
+
+    font-size:
+        clamp(30px, 3.2vw, 46px);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    color: #1e3d33;
+}
+
+
+.welcome p {
+
+    margin-top:
+        clamp(10px, 2vh, 22px);
+
+    color: #6c7c75;
+
+    font-size:
+        clamp(14px, 1.4vw, 20px);
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+
+    margin-bottom:
+        clamp(16px, 2.5vh, 30px);
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size:
+        clamp(13px, 1.2vw, 18px);
+
+    font-weight: 500;
+
+    color: #1e3d33;
+
+    margin-bottom:
+        clamp(7px, 1vh, 13px);
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height:
+        clamp(52px, 7vh, 79px);
+
+    padding:
+        0 clamp(15px, 2vw, 23px);
+
+    border:
+        1.5px solid
+        #d4dcd6;
+
+    border-radius:
+        clamp(9px, 1vw, 13px);
+
+    background: #ffffff;
+
+    color: #1d3c33;
+
+    font-size:
+        clamp(14px, 1.3vw, 19px);
+
+    outline: none;
+
+    font-family: inherit;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.form-group input::placeholder {
+    color: #72817a;
+}
+
+
+.form-group input:focus {
+
+    border-color: #28624d;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(40, 98, 77, 0.08);
+}
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+.password-container {
+    position: relative;
+}
+
+
+.password-container input {
+    padding-right: 100px;
+}
+
+
+#togglePassword {
+
+    position: absolute;
+
+    right:
+        clamp(15px, 2vw, 22px);
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+
+    border: none;
+
+    color: #28624d;
+
+    font-size:
+        clamp(13px, 1.2vw, 17px);
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM OPTIONS
+===================================================== */
+
+.form-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: -5px;
+
+    margin-bottom:
+        clamp(18px, 3vh, 42px);
+}
+
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #6d7c75;
+
+    font-size:
+        clamp(12px, 1.1vw, 17px);
+
+    cursor: pointer;
+}
+
+
+.remember input {
+
+    width:
+        clamp(17px, 1.5vw, 23px);
+
+    height:
+        clamp(17px, 1.5vw, 23px);
+
+    accent-color: #28624d;
+}
+
+
+.forgot-password {
+
+    color: #28624d;
+
+    font-size:
+        clamp(12px, 1.1vw, 17px);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message {
+
+    display: none;
+
+    padding: 10px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+.message.error {
+
+    display: block;
+
+    color: #9c2929;
+
+    background: #f9e8e7;
+}
+
+
+.message.success {
+
+    display: block;
+
+    color: #28623f;
+
+    background: #e7f3e9;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.login-button {
+
+    width: 100%;
+
+    height:
+        clamp(52px, 7vh, 79px);
+
+    border: none;
+
+    border-radius:
+        clamp(9px, 1vw, 13px);
+
+    background: #28624d;
+
+    color: white;
+
+    font-size:
+        clamp(15px, 1.4vw, 21px);
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-button:hover {
+    background: #1f513f;
+}
+
+
+.login-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        clamp(10px, 2vw, 30px);
+
+    margin:
+        clamp(18px, 3vh, 38px)
+        0
+        clamp(15px, 2vh, 30px);
+}
+
+
+.divider span {
+
+    height: 1px;
+
+    background: #d3dad5;
+
+    flex: 1;
+}
+
+
+.divider p {
+
+    color: #6e7d76;
+
+    font-size:
+        clamp(11px, 1vw, 16px);
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   GOOGLE BUTTON
+===================================================== */
+
+.google-button {
+
+    width: 100%;
+
+    height:
+        clamp(52px, 7vh, 79px);
+
+    border:
+        1.5px solid
+        #d4dcd6;
+
+    border-radius:
+        clamp(9px, 1vw, 13px);
+
+    background: #ffffff;
+
+    color: #1f3d34;
+
+    font-size:
+        clamp(14px, 1.3vw, 19px);
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+}
+
+
+.google-button:hover {
+    background: #f5f6f3;
+}
+
+
+/* =====================================================
+   REGISTER
+===================================================== */
+
+.register {
+
+    text-align: center;
+
+    margin-top:
+        clamp(18px, 3vh, 40px);
+
+    font-size:
+        clamp(12px, 1.1vw, 17px);
+
+    color: #6d7c75;
+}
+
+
+.register a {
+
+    color: #28624d;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+}
+
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RIGHT FOOTER
+===================================================== */
+
+.right-footer {
+
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap:
+        clamp(8px, 1vw, 18px);
+
+    padding-top:
+        clamp(15px, 2vh, 30px);
+
+    color: #6c7c75;
+
+    font-size:
+        clamp(9px, 0.9vw, 15px);
+}
+
+
+.right-footer a {
+
+    color: #6c7c75;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   LAPTOP / SCREEN PENDEK
+===================================================== */
+
+/*
+   Misalnya laptop:
+   1366 x 768
+   1280 x 720
+   1440 x 900
+
+   Kita kecilkan spacing supaya SEMUA masuk.
+*/
+
+@media (max-height: 800px) and (min-width: 901px) {
+
+    .left-panel {
+
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+
+    .hero-content {
+
+        margin-top: 55px;
+    }
+
+
+    .small-title {
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero-description {
+
+        margin-top: 25px;
+    }
+
+
+    .categories {
+
+        margin-top: 30px;
+    }
+
+
+    .promo-card {
+
+        margin-top: 40px;
+
+        padding:
+            25px 30px;
+    }
+
+
+    .promo-card h2 {
+
+        font-size: 34px;
+    }
+
+
+    .promo-card p {
+
+        font-size: 15px;
+
+        margin-top: 12px;
+    }
+
+
+    .login-container {
+
+        max-width: 570px;
+    }
+
+
+    .welcome {
+
+        margin-bottom: 25px;
+    }
+
+
+    .welcome h2 {
+
+        font-size: 36px;
+    }
+
+
+    .welcome p {
+
+        font-size: 16px;
+
+        margin-top: 12px;
+    }
+
+
+    .form-group {
+
+        margin-bottom: 18px;
+    }
+
+
+    .form-group input {
+
+        height: 58px;
+    }
+
+
+    .form-options {
+
+        margin-bottom: 22px;
+    }
+
+
+    .login-button {
+
+        height: 58px;
+    }
+
+
+    .divider {
+
+        margin:
+            20px 0 18px;
+    }
+
+
+    .google-button {
+
+        height: 58px;
+    }
+
+
+    .register {
+
+        margin-top: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SHORT LAPTOP
+===================================================== */
+
+@media (max-height: 680px) and (min-width: 901px) {
+
+    .left-panel {
+
+        padding:
+            25px 6% 20px;
+    }
+
+
+    .logo {
+
+        font-size: 42px;
+    }
+
+
+    .tagline {
+
+        font-size: 12px;
+    }
+
+
+    .hero-content {
+
+        margin-top: 35px;
+    }
+
+
+    .small-title {
+
+        font-size: 12px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 48px;
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+        margin-top: 18px;
+    }
+
+
+    .categories {
+
+        margin-top: 22px;
+    }
+
+
+    .categories button {
+
+        height: 42px;
+
+        min-width: 105px;
+
+        font-size: 14px;
+    }
+
+
+    .promo-card {
+
+        margin-top: 25px;
+
+        padding: 20px 25px;
+
+        border-radius: 20px;
+    }
+
+
+    .promo-small {
+
+        font-size: 11px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .promo-card h2 {
+
+        font-size: 28px;
+    }
+
+
+    .promo-card p {
+
+        font-size: 12px;
+
+        margin-top: 8px;
+    }
+
+
+    .left-footer {
+
+        font-size: 10px;
+    }
+
+
+    .right-panel {
+
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+
+    .welcome {
+
+        margin-bottom: 18px;
+    }
+
+
+    .welcome > span {
+
+        font-size: 10px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .welcome h2 {
+
+        font-size: 30px;
+    }
+
+
+    .welcome p {
+
+        font-size: 13px;
+
+        margin-top: 8px;
+    }
+
+
+    .form-group {
+
+        margin-bottom: 12px;
+    }
+
+
+    .form-group label {
+
+        font-size: 12px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .form-group input {
+
+        height: 47px;
+
+        font-size: 14px;
+    }
+
+
+    .form-options {
+
+        margin-bottom: 15px;
+    }
+
+
+    .login-button {
+
+        height: 48px;
+
+        font-size: 16px;
+    }
+
+
+    .divider {
+
+        margin:
+            13px 0;
+    }
+
+
+    .google-button {
+
+        height: 48px;
+
+        font-size: 14px;
+    }
+
+
+    .register {
+
+        margin-top: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .right-footer {
+
+        font-size: 9px;
+
+        padding-top: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    body {
+
+        overflow: auto;
+    }
+
+
+    .page {
+
+        height: auto;
+
+        min-height: 100dvh;
+
+        display: block;
+
+        overflow: visible;
+    }
+
+
+    .left-panel {
+
+        height: auto;
+
+        min-height: 100dvh;
+
+        overflow: visible;
+    }
+
+
+    .right-panel {
+
+        height: auto;
+
+        min-height: 100dvh;
+
+        overflow: visible;
+    }
+
+
+    .login-container {
+
+        margin-top: 60px;
+
+        margin-bottom: 50px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .left-panel {
+
+        padding:
+            35px 25px 40px;
+    }
+
+
+    .logo {
+
+        font-size: 45px;
+    }
+
+
+    .hero-content {
+
+        margin-top: 65px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+        margin-top: 28px;
+    }
+
+
+    .categories {
+
+        margin-top: 35px;
+    }
+
+
+    .promo-card {
+
+        margin-top: 55px;
+
+        padding:
+            25px;
+    }
+
+
+    .promo-card h2 {
+
+        font-size: 32px;
+    }
+
+
+    .right-panel {
+
+        padding:
+            35px 25px;
+    }
+
+
+    .login-container {
+
+        margin-top: 60px;
+    }
+
+
+    .welcome h2 {
+
+        font-size: 32px;
+    }
+
+
+    .welcome p {
+
+        font-size: 15px;
+    }
+
+
+    .form-group input {
+
+        height: 58px;
+    }
+
+
+    .login-button {
+
+        height: 58px;
+    }
+
+
+    .google-button {
+
+        height: 58px;
+    }
+}

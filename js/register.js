@@ -4,7 +4,7 @@
 ===================================================== */
 
 // Sesuaikan dengan alamat Backend Laravel kamu.
-const API_URL = "http://127.0.0.1:8000/api/register";
+const API_URL = "http://10.208.73.186:8000/api/register";
 
 
 /* =====================================================
